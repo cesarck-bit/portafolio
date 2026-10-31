@@ -80,3 +80,58 @@ h2::before {
   content: "✦ ";
   color: #4a90d9;
 }
+
+/* Paso 4: Propiedades de caja */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #1a4f8b;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  min-height: 150px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1a4f8b;
+}
+
+/* Encabezado con menú horizontal */
+header {
+  background-color: #1a4f8b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav a {
+  font-size: 1.1rem;
+}
+
+/* Botón del encabezado */
+#hero a {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
