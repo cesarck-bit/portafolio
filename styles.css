@@ -1,0 +1,82 @@
+/* Tipografía general */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* Selectores de tipo */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #1a4f8b;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #1a4f8b;
+  padding-bottom: 0.5rem;
+}
+
+/* Selector de clase */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Selectores de ID */
+#hero {
+  background: linear-gradient(135deg, #1a4f8b, #4a90d9);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h1 {
+  color: #ffffff;
+}
+
+/* Selector descendiente */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Selector de hijo directo */
+nav > ul > li {
+  list-style: none;
+}
+
+/* Selector de hermano adyacente */
+h2 + p {
+  font-style: italic;
+  color: #555555;
+}
+
+/* Selector de atributo */
+a[href^="#"] {
+  font-weight: bold;
+}
+
+/* Pseudo-clases */
+nav a:hover {
+  text-decoration: underline;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+/* Pseudo-elementos */
+h2::before {
+  content: "✦ ";
+  color: #4a90d9;
+}
