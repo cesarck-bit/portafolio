@@ -225,3 +225,43 @@ header nav ul {
     font-size: 4rem;
   }
 }
+
+/* Paso 9: Formulario de contacto */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #1a4f8b;
+  box-shadow: 0 0 0 3px rgba(26, 79, 139, 0.2);
+}
+
+.button {
+  background-color: #1a4f8b;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #4a90d9;
+}
