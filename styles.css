@@ -262,6 +262,31 @@ header nav ul {
   transition: background-color 0.3s ease;
 }
 
+/* Paso 10: Habilidades con Flexbox */
+.habilidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.badge {
+  background-color: #ffffff;
+  color: #1a4f8b;
+  border: 2px solid #1a4f8b;
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #1a4f8b;
+  color: #ffffff;
+}
+
 .button:hover {
   background-color: #4a90d9;
 }
