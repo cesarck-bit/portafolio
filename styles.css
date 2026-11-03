@@ -177,3 +177,51 @@ nav a {
   z-index: -1;
   opacity: 0.6;
 }
+
+/* Paso 8: Diseño responsivo (mobile first) */
+
+/* Base (móvil, 320px a 767px): tarjetas en una columna y menú vertical */
+header nav ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.galeria .card {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Tablet (768px en adelante): menú horizontal y 2 columnas */
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .galeria .card {
+    flex: 1 1 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+/* Escritorio (1024px en adelante): 3 columnas */
+@media (min-width: 1024px) {
+  .galeria .card {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+/* Escritorio grande (1440px en adelante): contenedor más ancho */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
