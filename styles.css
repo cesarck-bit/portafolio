@@ -1,0 +1,368 @@
+/* Tipografía general */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* Selectores de tipo */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #1a4f8b;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #1a4f8b;
+  padding-bottom: 0.5rem;
+}
+
+/* Selector de clase */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Selectores de ID */
+#hero {
+  background: linear-gradient(135deg, #1a4f8b, #4a90d9);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h1 {
+  color: #ffffff;
+}
+
+/* Selector descendiente */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Selector de hijo directo */
+nav > ul > li {
+  list-style: none;
+}
+
+/* Selector de hermano adyacente */
+h2 + p {
+  font-style: italic;
+  color: #555555;
+}
+
+/* Selector de atributo */
+a[href^="#"] {
+  font-weight: bold;
+}
+
+/* Pseudo-clases */
+nav a:hover {
+  text-decoration: underline;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+/* Pseudo-elementos */
+h2::before {
+  content: "✦ ";
+  color: #4a90d9;
+}
+
+/* Paso 4: Propiedades de caja */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #1a4f8b;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  min-height: 150px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1a4f8b;
+}
+
+/* Encabezado con menú horizontal */
+header {
+  background-color: #1a4f8b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav a {
+  font-size: 1.1rem;
+}
+
+/* Botón del encabezado */
+#hero a {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Paso 6: Flexbox en la galería de proyectos */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.galeria .card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* Paso 7: Z-index y efectos hover */
+.galeria .card {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  z-index: 10;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Elemento decorativo con ::before */
+.galeria .card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #4a90d9 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Paso 8: Diseño responsivo (mobile first) */
+
+/* Base (móvil, 320px a 767px): tarjetas en una columna y menú vertical */
+header nav ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.galeria .card {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Tablet (768px en adelante): menú horizontal y 2 columnas */
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .galeria .card {
+    flex: 1 1 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+/* Escritorio (1024px en adelante): 3 columnas */
+@media (min-width: 1024px) {
+  .galeria .card {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+/* Escritorio grande (1440px en adelante): contenedor más ancho */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Paso 9: Formulario de contacto */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #1a4f8b;
+  box-shadow: 0 0 0 3px rgba(26, 79, 139, 0.2);
+}
+
+.button {
+  background-color: #1a4f8b;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #4a90d9;
+}
+
+/* Paso 10: Habilidades con Flexbox */
+.habilidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.badge {
+  background-color: #ffffff;
+  color: #1a4f8b;
+  border: 2px solid #1a4f8b;
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #1a4f8b;
+  color: #ffffff;
+}
+
+/* Paso 11: Footer con Flexbox */
+footer {
+  background-color: #1a4f8b;
+  color: #ffffff;
+  padding: 2rem 1rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-columna {
+  flex: 1 1 200px;
+}
+
+.footer-columna h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+}
+
+/* Paso 12: Imágenes con figure y figcaption */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.perfil {
+  max-width: 300px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.perfil img {
+  border-radius: 50%;
+  border: 4px solid #1a4f8b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.perfil figcaption {
+  font-style: italic;
+  color: #555555;
+  margin-top: 0.75rem;
+}
