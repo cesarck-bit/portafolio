@@ -262,10 +262,6 @@ header nav ul {
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #4a90d9;
-}
-
 /* Paso 10: Habilidades con Flexbox */
 .habilidades-lista {
   display: flex;
@@ -290,7 +286,6 @@ header nav ul {
   background-color: #1a4f8b;
   color: #ffffff;
 }
-
 /* Paso 11: Footer con Flexbox */
 footer {
   background-color: #1a4f8b;
@@ -365,4 +360,8 @@ img {
   font-style: italic;
   color: #555555;
   margin-top: 0.75rem;
+}
+
+.button:hover {
+  background-color: #4a90d9;
 }
