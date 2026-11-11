@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cesar Cespedes | Portfolio</title>
+        <meta name="description" content="Cesar Cespedes Bogantes: Cisco networking, CCNP Security, cybersecurity, and software development.">
+        <title>Cesar Cespedes | Network Security & Software</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <nav>
+        <header class="site-header">
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#sobre-mi">About</a></li>
@@ -22,78 +23,108 @@
             </nav>
         </header>
 
-        <main class="container">
-            <section id="hero">
-                <h1>Cesar Cespedes Bogantes</h1>
+        <main class="container" id="main-content">
+            <section id="hero" aria-labelledby="hero-title">
+                <p class="eyebrow">Network Security & Software Development</p>
+                <h1 id="hero-title">Cesar Cespedes Bogantes 'C'</h1>
                 <p>Network Technician · CCNP Security</p>
                 <p>Cybersecurity</p>
                 <p>Software Development Technician</p>
-                <a href="#contacto">Get in touch</a>
+                <a class="hero-link" href="#contacto">Get in touch <span aria-hidden="true">&rarr;</span></a>
             </section>
 
-            <section id="sobre-mi">
-                <h2>About me</h2>
-                <figure class="perfil">
-                    <img src="images/profile.jpg" alt="Portrait of Cesar Cespedes">
-                    <figcaption>Cesar Cespedes Bogantes · Software development · CCNP Security · Cybersecurity</figcaption>
-                </figure>
-                <p>Software developer with experience in modern web technologies and cybersecurity.</p>
-                <p>17 years of experience in Cisco networking, with a CCNP Security certification.</p>
-            </section>
-
-            <section id="habilidades">
-                <h2>Skills</h2>
-                <div class="habilidades-lista">
-                    <span class="badge">HTML</span>
-                    <span class="badge">CSS</span>
-                    <span class="badge">JavaScript</span>
-                    <span class="badge">Java</span>
-                    <span class="badge">Python</span>
-                    <span class="badge">GitHub</span>
-                    <span class="badge">Responsive Design</span>
-                    <span class="badge">Flexbox</span>
-                    <span class="badge">Cybersecurity</span>
-                    <span class="badge">Routing and Switching</span>
-                    <span class="badge">Load Balancing</span>
-                    <span class="badge">Cisco ISE</span>
+            <section id="sobre-mi" aria-labelledby="about-title">
+                <h2 id="about-title">About me</h2>
+                <div class="about-layout">
+                    <figure class="perfil">
+                        <img src="images/profile.jpg" alt="Portrait of Cesar Cespedes">
+                        <figcaption>Cesar Cespedes Bogantes · Software development · CCNP Security · Cybersecurity</figcaption>
+                    </figure>
+                    <div class="about-copy">
+                        <p>I bring together 17 years of Cisco networking experience and a CCNP Security certification with hands-on software development skills.</p>
+                        <p>My focus is connecting infrastructure expertise with software through network automation, security integrations, and monitoring tools. I work with Python, Java, and modern web technologies to bridge network operations and software development.</p>
+                    </div>
+                    <figure class="guitar-figure">
+                        <img src="images/guitar.jpg" alt="Red electric guitar displayed on a wall" loading="lazy">
+                        <figcaption>A little beyond technology</figcaption>
+                    </figure>
                 </div>
             </section>
 
-            <section id="proyectos">
-                <h2>Projects</h2>
+            <section id="habilidades" aria-labelledby="skills-title">
+                <h2 id="skills-title">Skills</h2>
+                <div class="skills-groups">
+                    <section class="skill-group" aria-labelledby="development-title">
+                        <h3 id="development-title">Software development</h3>
+                        <ul class="habilidades-lista" aria-label="Software development skills">
+                            <li class="badge">HTML</li>
+                            <li class="badge">CSS</li>
+                            <li class="badge">JavaScript</li>
+                            <li class="badge">Java</li>
+                            <li class="badge">Python</li>
+                            <li class="badge">GitHub</li>
+                            <li class="badge">Responsive Design</li>
+                            <li class="badge">Flexbox</li>
+                        </ul>
+                    </section>
+                    <section class="skill-group" aria-labelledby="networking-title">
+                        <h3 id="networking-title">Networking and security</h3>
+                        <ul class="habilidades-lista" aria-label="Networking and security skills">
+                            <li class="badge">CCNP Security</li>
+                            <li class="badge">Cybersecurity</li>
+                            <li class="badge">Cisco Routing and Switching</li>
+                            <li class="badge">Load Balancing</li>
+                            <li class="badge">Cisco ISE</li>
+                            <li class="badge">802.1X</li>
+                            <li class="badge">RADIUS / TACACS+</li>
+                            <li class="badge">IPsec VPN</li>
+                            <li class="badge">OSPF / BGP</li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
+            <section id="proyectos" aria-labelledby="projects-title">
+                <h2 id="projects-title">Projects</h2>
                 <div class="galeria">
                     <article class="card">
-                        <h3>Project 1</h3>
-                        <p>Brief project description.</p>
-                        <p><strong>Technologies:</strong> HTML, CSS</p>
+                        <h3>Enterprise NAC Implementation with Cisco ISE</h3>
+                        <p>Deployed and configured Cisco Identity Services Engine (ISE) to enforce Zero Trust network access. Implemented 802.1X authentication, dynamic VLAN assignment, and granular authorization policies for corporate users and endpoints.</p>
+                        <p><strong>Technologies:</strong> Cisco ISE, 802.1X, RADIUS, TACACS+, Active Directory</p>
                     </article>
                     <article class="card">
-                        <h3>Project 2</h3>
-                        <p>Brief project description.</p>
-                        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                        <h3>Responsive Personal Web Portfolio</h3>
+                        <p>Designed and developed a modern, fully responsive personal portfolio from scratch to showcase cybersecurity and networking projects. Focused on clean semantic architecture, smooth interactivity, and cross-device compatibility.</p>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
                     </article>
                     <article class="card">
-                        <h3>Project 3</h3>
-                        <p>Brief project description.</p>
-                        <p><strong>Technologies:</strong> Java</p>
+                        <h3>High-Availability Secure Network Architecture</h3>
+                        <p>Engineered a resilient enterprise network infrastructure integrating next-generation firewalls, IPsec VPN tunnels, and application load balancing to ensure business continuity, traffic optimization, and threat mitigation.</p>
+                        <p><strong>Technologies:</strong> CCNP Security, Load Balancers (F5/HAProxy), NGFW, IPsec VPN, OSPF/BGP</p>
                     </article>
                 </div>
             </section>
 
-            <section id="contacto">
-                <h2>Contact</h2>
-                <form class="formulario" id="contact-form">
+
+            <section id="contacto" aria-labelledby="contact-title">
+                <h2 id="contact-title">Contact</h2>
+                <form class="formulario" id="contact-form" action="https://formspree.io/f/mgakekla" method="POST">
                     <label for="nombre">Name</label>
-                    <input type="text" id="nombre" name="name" required>
+                    <input type="text" id="nombre" name="name" autocomplete="name" required>
 
                     <label for="correo">Email address</label>
-                    <input type="email" id="correo" name="email" required>
+                    <input type="email" id="correo" name="email" autocomplete="email" required>
 
                     <label for="mensaje">Message</label>
                     <textarea id="mensaje" name="message" rows="5" required></textarea>
 
+                    <div class="form-honeypot" aria-hidden="true">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+
                     <button type="submit" class="button">Send message</button>
-                    <p class="form-note">Your email app will open with the message ready to send.</p>
+                    <p class="form-note" id="form-status" role="status" aria-live="polite" aria-atomic="true">Your message will be sent securely through Formspree.</p>
                 </form>
             </section>
         </main>
@@ -101,14 +132,14 @@
         <footer>
             <div class="footer-contenido">
                 <div class="footer-columna">
-                    <h3>Cesar Cespedes</h3>
+                    <h2>Cesar Cespedes</h2>
                     <p>Software Development Technician</p>
                     <p>CCNP Security</p>
                     <p>Cybersecurity</p>
                     <p><a href="mailto:cesar.ck@gmail.com">cesar.ck@gmail.com</a></p>
                 </div>
                 <div class="footer-columna">
-                    <h3>Links</h3>
+                    <h2>Links</h2>
                     <ul>
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#proyectos">Projects</a></li>
@@ -116,7 +147,7 @@
                     </ul>
                 </div>
                 <div class="footer-columna">
-                    <h3>Connect</h3>
+                    <h2>Connect</h2>
                     <ul>
                         <li><a href="https://github.com/cesarck-bit" target="_blank" rel="noopener">GitHub</a></li>
                         <li><a href="https://www.linkedin.com/in/cesar-cespedes-0660854b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -125,19 +156,6 @@
             </div>
             <p class="copyright">&copy; 2026 Cesar Cespedes Bogantes. All rights reserved.</p>
         </footer>
-        <script>
-            document.querySelector("#contact-form").addEventListener("submit", (event) => {
-                event.preventDefault();
-
-                const formData = new FormData(event.currentTarget);
-                const name = formData.get("name");
-                const email = formData.get("email");
-                const message = formData.get("message");
-                const subject = encodeURIComponent(`Portfolio message from ${name}`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-                window.location.href = `mailto:cesar.ck@gmail.com?subject=${subject}&body=${body}`;
-            });
-        </script>
+        <script src="script.js" defer></script>
     </body>
 </html>
