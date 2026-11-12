@@ -23,7 +23,14 @@ html {
 
 body {
   margin: 0;
-  background: var(--page);
+  background-color: var(--page);
+  background-image:
+    linear-gradient(rgb(16 19 17 / 91%), rgb(16 19 17 / 94%)),
+    url("images/guitar.jpg");
+  background-position: center, center 38%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   line-height: 1.65;
