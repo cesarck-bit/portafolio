@@ -1,55 +1,35 @@
-# Cesar Cespedes Bogantes — Personal Portfolio
+# César Céspedes Bogantes — Network Security & Software Engineering Portfolio
 
-A responsive, single-page portfolio built with semantic HTML5 and CSS3. It presents my background, skills, projects, and a contact form, and it adapts from 360px phones to 1280px desktops.
+A modern, responsive single-page web portfolio built with semantic HTML5, CSS3, and JavaScript. It showcases my experience in enterprise network architecture, cybersecurity (CCNP Security, Cisco ISE), and software development.
 
-## Links
+## Live Demo
+- **Live Website:** [https://github.io](https://github.io)
+- **Repository:** [https://github.com](https://github.com)
 
-- Live website (GitHub Pages): https://cesarck-bit.github.io/portafolio/
-- Video (2 min, YouTube unlisted): https://youtu.be/ACSogtAkbzQ
-- Repository: https://github.com/cesarck-bit/portafolio
+## Highlighted Projects & Experience
+- **Enterprise NAC Implementation with Cisco ISE:** Zero Trust network access, 802.1X authentication, dynamic VLAN assignment, and granular authorization policies.
+- **High-Availability Secure Network Architecture:** Resilient enterprise infrastructure integrating next-generation firewalls (NGFW), IPsec VPNs, load balancing, and dynamic routing (OSPF/BGP).
+- **Responsive Personal Web Portfolio:** Built from scratch focusing on clean semantic architecture, accessibility (`prefers-reduced-motion`, `:focus-visible`), and mobile-first responsive design.
 
-## About the Project
-
-This site was built for the Web Design 1 course to apply HTML structure and CSS layout concepts in a real project, then published with GitHub Pages.
-
-## Technologies Used
-
-- HTML5: semantic structure (`header`, nav, main, section, article, figure, `footer`) and a labeled contact form.
-- CSS3: selectors, box model, Flexbox, z-index, transitions, and media queries.
-- Git & GitHub: version control and hosting.
-- GitHub Pages: deployment.
-
-## Website Sections
-
-- Hero: introduction and a call to action that leads to the contact section.
-- About Me: profile photo with a caption and a short bio.
-- Skills: badges distributed with Flexbox.
-- Projects: responsive card gallery with hover effects.
-- Contact: form with required fields and email validation.
-- Footer: links and copyright, arranged in columns.
-
-## Key Features
-
-- Mobile-first, responsive layout (360px to 1280px and up).
-- Sticky navigation bar.
-- Hover effects on project cards and skill badges.
-- Form validation with HTML5 attributes, no backend required.
+## Tech Stack & Core Competencies
+- **Networking & Security:** Cisco ISE, CCNP Security, 802.1X, RADIUS/TACACS+, Firewalls, Load Balancers, OSPF, BGP, VPNs.
+- **Software & Web Development:** HTML5, CSS3 (Flexbox, CSS Grid, Custom Properties), JavaScript, Python, SQL, Git & GitHub.
 
 ## Project Structure
+```text
 portafolio/
-├── index.html
-├── styles.css
-└── images/
-└── profile.jpg
+├── index.html      # Semantic structure and content
+├── styles.css      # Dark-mode theme, responsive layouts, and animations
+├── script.js       # Interactive features and form handling
+└── images/         # Profile photo and visual assets
+```
 
 ## Run Locally
+Clone the repository and open `index.html` in your preferred browser:
+```bash
+git clone https://github.com.git
+cd portafolio
+```
 
-git clone https://github.com/cesarck-bit/portafolio.git
-
-Then open index.html in your browser.
-
-## Author
-
-Cesar Cespedes Bogantes, técnico en desarrollo de software.
-
-© 2026 Cesar Cespedes Bogantes. All rights reserved.
+---
+© 2026 César Céspedes Bogantes. All rights reserved.
